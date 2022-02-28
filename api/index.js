@@ -10,8 +10,10 @@ app.use(express.json());
 
 //Routes Config
 const authRoutes = require("./routes/auth");
+const coreRoutes = require("./routes/core");
 // const { db } = require("./models/user");
 app.use("/api", authRoutes);
+app.use("/core", coreRoutes);
 
 //Server Config
 app.listen(5000, () => {
