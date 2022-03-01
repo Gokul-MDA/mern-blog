@@ -1,0 +1,12 @@
+.create-container {
+  margin-left: 150px;
+}
+
+.input-title {
+  border: none;
+  border-bottom: 1px solid;
+  height: 50px;
+  width: 600px;
+  margin-top: 20px;
+  font-size: 24px;
+}

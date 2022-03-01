@@ -1,0 +1,26 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 635px;
+  width: 100px;
+  position: fixed;
+  border-right: 1px solid gray;
+}
+.nav-title {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+.login-button {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.icons {
+  margin-top: 50px;
+}

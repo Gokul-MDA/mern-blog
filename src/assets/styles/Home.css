@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+.home-container {
+  margin-left: 120px;
+  position: absolute;
+}
+
+.blog-box {
+  margin-top: 10px;
+  height: 200px;
+  width: 900px;
+}
+.blog-details {
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.blog-details > p {
+  font-size: 18px;
+}
+.blog-title {
+  margin-top: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+.blog-content {
+  margin-top: 15px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  overflow: hidden;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
