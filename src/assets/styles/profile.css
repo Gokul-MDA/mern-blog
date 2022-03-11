@@ -1,0 +1,41 @@
+.Profile {
+  margin-left: 300px;
+  position: absolute;
+}
+.input-details {
+  margin-top: 10px;
+  font-size: 15px;
+  width: 500px;
+}
+.profile-heading {
+  margin-top: 60px;
+
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1px solid #e6e6e6;
+}
+.profile-label {
+  /* padding: 10px; */
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.profile-input {
+  width: 600px;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: 20px;
+}
+.profile-input:focus {
+  outline: none;
+}
+.profile-button {
+  margin-top: 40px;
+  margin-left: 600px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+}

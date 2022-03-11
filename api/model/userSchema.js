@@ -13,6 +13,21 @@ const user = mongoose.Schema({
     type: String,
     required: true,
   },
+  bio: {
+    type: String,
+  },
+  photo: {
+    type: String,
+  },
+  blogs: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "blog",
+    },
+  ],
+  linkedin: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("user", user);

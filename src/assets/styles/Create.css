@@ -1,12 +1,32 @@
 .create-container {
-  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 250px;
 }
 
 .input-title {
   border: none;
-  border-bottom: 1px solid;
-  height: 50px;
-  width: 600px;
+  height: inherit;
+  width: 800px;
   margin-top: 20px;
   font-size: 24px;
+  padding: 30px;
+}
+
+.input-title:focus {
+  outline: none;
+}
+
+.input-content {
+  border: none;
+  height: inherit;
+  width: 800px;
+  margin-top: 20px;
+  font-size: 24px;
+  padding: 30px;
+}
+
+.input-content:focus {
+  outline: none;
 }

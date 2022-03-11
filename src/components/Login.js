@@ -7,17 +7,25 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState([]);
 
-  const submit = () => {
+  const submit = (e) => {
+    e.preventDefault();
     axios
-      .post("http://localhost:5000/api/signin", { email, password })
-      .then((response) => console.log(response.status))
-      .then(() => navigate("/Home"))
-      .catch(() => alert("password wrong"));
+      .post("http://192.168.43.198:5000/api/signin", { email, password })
+      .then((response) => {
+        localStorage.setItem("token", response.data.message._id);
+      })
+      .then(console.log(user))
+      .then(() => navigate("/"))
+      .catch((err) => console.log(err));
   };
   return (
     <div className="container">
       <div className="wrapper">
+        <div className="form_wallpaper">
+          <p className="wallpaper-text"> </p>
+        </div>
         <div className="form-wrapper">
           <form className="form ">
             <p className="title">Login</p>
@@ -30,6 +38,7 @@ function Login() {
               type="text"
               name="email"
               value={email}
+              placeholder="Enter email address"
               onChange={(event) => setEmail(event.target.value)}
             />
             <br />
@@ -42,20 +51,18 @@ function Login() {
               type="password"
               name="password"
               value={password}
+              placeholder="Enter password"
               onChange={(event) => setPassword(event.target.value)}
             />
             <br />
-            <a>
-              <Link to="/Register">Do not have account ?</Link>
-            </a>
+            <Link style={{ color: "black" }} to="/Register">
+              Do not have account ?
+            </Link>
             <br />
             <button className="form-button" onClick={submit}>
               Login
             </button>
           </form>
-        </div>
-        <div className="form_wallpaper">
-          <p className="wallpaper-text"> </p>
         </div>
       </div>
     </div>

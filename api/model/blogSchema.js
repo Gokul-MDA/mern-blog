@@ -6,12 +6,16 @@ const Blog = mongoose.Schema({
     required: true,
   },
   author: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "user",
     required: true,
   },
   content: {
     type: String,
     required: true,
+  },
+  image: {
+    type: String,
   },
   time: {
     type: Date,

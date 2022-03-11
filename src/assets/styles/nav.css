@@ -3,24 +3,34 @@
   flex-direction: column;
   justify-content: space-between;
   height: 635px;
-  width: 100px;
+  width: 80px;
   position: fixed;
-  border-right: 1px solid gray;
+  border-right: 1px solid #e6e6e6;
 }
 .nav-title {
   margin-top: 20px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 30px;
+  margin-left: 25px;
 }
+
+.nav-Icon {
+  height: 22px;
+  width: 22px;
+}
+
+.create-Icon {
+  margin-top: 50px;
+}
+
 .login-button {
-  margin-left: 30px;
+  margin-left: 10px;
   margin-bottom: 10px;
 }
 .icons {
-  margin-top: 50px;
+  margin-top: 40px;
 }

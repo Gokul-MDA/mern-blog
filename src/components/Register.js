@@ -5,27 +5,29 @@ import "../assets/styles/login.css";
 
 function Register() {
   const navigate = useNavigate();
-  const [user_name, setUser_Name] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [confirm_password, setConfirm_Password] = useState();
+  const [user_name, setUser_Name] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirm_password, setConfirm_Password] = useState("");
 
-  const submitForm = () => {
-    console.log(user_name);
-
+  const submitForm = (e) => {
+    e.preventDefault();
     axios
-      .post(`http://localhost:5000/api/signup`, {
+      .post("http://192.168.43.198:5000/api/signup", {
         user_name,
         email,
         password,
         confirm_password,
       })
       .then(() => navigate("/Login"))
-      .catch((err) => console.log("error"));
+      .catch((err) => console.log(err));
   };
   return (
     <div className="container">
       <div className="wrapper">
+        <div className="form_wallpaper">
+          <p className="wallpaper-text"> </p>
+        </div>
         <div className="form-wrapper">
           <form className="form register-form">
             <p className="title">Register</p>
@@ -79,17 +81,14 @@ function Register() {
               onChange={(event) => setConfirm_Password(event.target.value)}
             />
             <br />
-            <a>
-              <Link to="/Login">Login</Link>
-            </a>
+            <Link style={{ color: "black" }} to="/Login">
+              Login
+            </Link>
             <br />
             <button className="form-button" onClick={submitForm}>
               Register
             </button>
           </form>
-        </div>
-        <div className="form_wallpaper">
-          <p className="wallpaper-text"> </p>
         </div>
       </div>
     </div>

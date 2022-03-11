@@ -1,42 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
+.home {
+  display: flex;
+}
 .home-container {
-  margin-left: 120px;
-  position: absolute;
+  width: 850px;
+  height: 100%;
+  border-right: 1px solid #e6e6e6;
+  margin-top: 80px;
+  margin-left: 160px;
 }
 
 .blog-box {
-  margin-top: 10px;
-  height: 200px;
-  width: 900px;
+  margin-top: 30px;
+  width: 800px;
+  border-bottom: 1px solid #e6e6e6;
 }
 .blog-details {
   display: flex;
-  flex-direction: row;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
+  gap: 15px;
+  margin-bottom: -25px;
 }
-.blog-details > p {
-  font-size: 18px;
+.date {
+  color: #757575;
 }
+
 .blog-title {
-  margin-top: 10px;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.blog-title > p {
+  text-decoration: none;
+  color: #292929;
 }
 .blog-content {
-  margin-top: 15px;
-  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 30px;
+  font-family: "Roboto";
   font-size: 18px;
-  font-weight: 300;
-  overflow: hidden;
-  line-height: 1.5;
+  font-weight: 400;
+}
+.blog-content > p {
+  text-decoration: none;
+  color: #292929;
+  line-height: 24px;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3; /* number of lines to show */
   line-clamp: 3;
   -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.upgrade-button {
+  width: 320px;
+  height: 35px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+.home-searchBar {
+  width: 320px;
+  height: 35px;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 13px;
+}
+.topics {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.topics > p {
+  font-weight: 600;
+  position: absolute;
+  margin-top: 100px;
+}
+.topicLinks {
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.topicButton {
+  padding: 8px;
+  border: none;
+  border-radius: 18px;
+  margin: 10px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.topicButton:hover {
+  cursor: pointer;
+  background-color: #e6e6e6;
 }
