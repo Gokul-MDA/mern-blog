@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
 import "../assets/styles/MyPost.css";
+import image from "../assets/uploads/6dd390bd-2cb5-4df3-b214-2f2dbe7e4b30-1646815005098.jpg";
 
 function MyPosts() {
   const [mypost, setMyPost] = useState([]);
@@ -43,7 +45,7 @@ function MyPosts() {
                   <p onClick={() => setBlog(post)}>{post.content}</p>
                 </div>
               </Link>
-              <img src={`../assets/uploads/${post.image}`} alt="" />
+              <img src={`../assets/uploads/${post.image}`} />
             </div>
           );
         })}

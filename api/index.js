@@ -19,8 +19,14 @@ const profileRoutes = require("./routes/profile");
 app.use("/api", authRoutes);
 app.use("/core", coreRoutes);
 app.use("/profile", profileRoutes);
-app.use("../../src/assets/uploads", express.static("../../src/assets/uploads"));
-app.use("../../src/assets/profile", express.static("../../src/assets/profile"));
+app.use(
+  "../src/assets/uploads",
+  express.static(path.join("../src/assets/uploads"))
+);
+app.use(
+  "../src/assets/profile",
+  express.static(path.join("../src/assets/profile"))
+);
 
 //Server Config
 app.listen(5000, () => {
